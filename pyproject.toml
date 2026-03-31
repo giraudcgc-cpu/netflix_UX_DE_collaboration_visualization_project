@@ -14,4 +14,5 @@ dependencies = [
     "pandas>=3.0.1",
     "psycopg[binary]>=3.3.3",
     "pydantic>=2.12.5",
+    "streamlit>=1.19.0",
 ]
