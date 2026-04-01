@@ -5,10 +5,10 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Copy dependency
-COPY requirements.txt .
+COPY pyproject.toml uv.lock ./
 
 # Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install uv && uv sync
 
 # Copy the rest of the project
 COPY . .
@@ -17,6 +17,6 @@ COPY . .
 EXPOSE 8501
 
 # Default command: run Streamlit app
-CMD ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["uv", "run", "streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
 
 # PowerBi is a windows product and is "outside"
