@@ -1,5 +1,8 @@
+import streamlit as st
+
 def main():
-    print("Hello from netflix-analytics-de-ux!")
+    st.title("Netflix Analytics")
+    st.write("Hello from netflix-analytics-de-ux!")
 
 
 if __name__ == "__main__":
