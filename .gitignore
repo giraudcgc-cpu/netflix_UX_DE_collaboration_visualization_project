@@ -83,3 +83,6 @@ database/*.duckdb
 .venv/
 __pycache__/
 .ipynb_checkpoints/
+
+# DuckDB (local analytical DB)
+*.duckdb
