@@ -57,24 +57,31 @@ dist/
 Thumbs.db
 
 # =========================
-# DATA ENGINEERING (CRITICAL)
+# DATA ENGINEERING
 # =========================
 
-# Raw / processed data
+# --- Keep folder structure visible ---
+!data/
+!data/README.md
+!data/.gitkeep
 
+# --- Ignore raw / external data ---
+data/raw/
+data/external/
 
-# Local analytical DBs
+# --- Ignore large processed outputs ---
+data/processed/*.parquet
+data/processed/*.csv
+
+# --- Allow small sample datasets (optional) ---
+!data/processed/sample_*.csv
+!data/processed/sample_*.parquet
+
+# --- Local analytical databases ---
 database/
 *.duckdb
-
-# SQL working directory (optional: ignore only temp files if needed)
-# sql/   <-- decide if this should be versioned
 
 # =========================
 # OPTIONAL (if needed)
 # =========================
-*.parquet
-*.csv
-*.jsonl
-*.jsonl.gz
-*.xlsx
+*.log
