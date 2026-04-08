@@ -61,7 +61,7 @@ Thumbs.db
 # =========================
 
 # Raw / processed data
-data/
+
 
 # Local analytical DBs
 database/
@@ -77,3 +77,4 @@ database/
 *.csv
 *.jsonl
 *.jsonl.gz
+*.xlsx
